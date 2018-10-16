@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="index.css">
+  <title>Page Title</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h2>Flashcards</h2>
+    </div>
+    <div id='form-div'>
+      <h1 id="add-card">+</h1>
+      <form autocomplete="off" id='add-card-form' class='hidden' action='/api/flashcards' method='POST'>
+        <label for="front">Front:</label>
+        <input type="text" name='front'>
+        <label for="back">Back:</label>
+        <input type="text" name='back'>
+        <label for="category">Category:</label>
+        <input type="text" name='category'>
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  </header>
+    <div id='card' class='animated faster'>
+      <h1 id='cards'></h1>
+    </div>
+  <div id='btn-div'>
+    <button id='back-btn' ><</button>
+    <button id="shuffle">Shuffle</button>
+    <button id='forward' >></button>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
